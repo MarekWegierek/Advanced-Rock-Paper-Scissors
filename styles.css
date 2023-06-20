@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(19,161,181,1) 39%, rgba(255,255,255,1) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    margin: 20px auto;
+    width: 70vw;
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr ;
+    grid-template-rows: 3fr 3fr 2fr 1fr;
+    grid-template-areas: 
+        'circle circle aside'
+        'circle circle aside'
+        'choices-option choices-option choices-option'
+        'score-board score-board score-board';
+    grid-gap: 10px;
+
+}
+
+.main-element {
+    border: 5px solid black;
+    background-color: antiquewhite;
+}
+
+#circle {
+    grid-area: circle;
+    
+
+}
+
+#aside-column {
+    grid-area: aside;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+#choices-option {
+    grid-area: choices-option;
+}
+
+#score-board {
+    grid-area: score-board;
+}
+
+.card-button, .card-button img {
+    width: 50px;
+    height: 50px;
+}
+
+.card-button {
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.card-button img {
+    transform: translateY(-4%) translateX(-4%);
+}
+
+.card-button:hover {
+    scale: 1.2;
+}
+
+@media only screen and (max-width:1280px) {
+    main {
+        width: 90vw;
+    }
+    #aside-column {
+        font-size: 1.1rem;
+    }
+}
