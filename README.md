@@ -25,3 +25,14 @@ It is a advanced version of Paper Rock Scissor Game, where to standard three opt
 2. Open index.html using your browser
 3. Click on the icon/card of your chosing. It will show up what option you beat with your icon (green) and which one will beat you (red). 
 4. Context menu on the right will help you if you are confused by UI or are colorblind
+
+## How to tweak project for your own uses?
+
+# Adding new card/option
+
+I will make cards as objects, and it will looks like this
+    const card = {
+        name: 'card_name',
+        beating: ['card_name_1', 'card_name_2'],
+        beaten_by: ['card_name_3', card_name_4']  
+    }
