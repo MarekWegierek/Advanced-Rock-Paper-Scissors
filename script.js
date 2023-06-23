@@ -8,38 +8,34 @@ let beatenByArray
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     let userChoice = e.target.id
-    cardList.filter((element) => {
-        if (element.btnName == userChoice) {
-            currentFigure = element.name
-            beatsArray = element.beats
-            beatenByArray = element.beatenBy
+    beatsArray = []
+    beatenByArray = []
+    currentCardBeats.replaceChildren()
+    currentCardBeatenBy.replaceChildren()
+    cardList.filter((card) => {
+        if (card.btnName == userChoice) {
+            currentFigure = card.name
+            beatsArray = card.beats
+            beatenByArray = card.beatenBy
         }
+
     })
+    
     userChoiceDisplay.innerHTML = currentFigure
-    currentCardBeats.innerHTML = beatsArray
-    currentCardBeatenBy.innerHTML = beatenByArray
     
+    function makeList(array, htmlElement) {
+        array.forEach(element =>{
+            const newElement = document.createElement('li')
+            let newContent = document.createTextNode(element)
+            newElement.appendChild(newContent)
+            htmlElement.appendChild(newElement)
+        })
+    }
+    
+    makeList(beatsArray, currentCardBeats)
+    makeList(beatenByArray, currentCardBeatenBy)
+
 }))
-
-beatsArray.forEach(elementOfArr => {
-    const newElement = document.createElement('li')
-    let newContent = document.createTextNode(elementOfArr)
-    newElement.appendChild(newContent)
-    currentCardBeats.appendChild(newElement)
-})
-
-    
-    let testArray = ['1', '2', '3']
-    testArray.forEach(element => {
-        const newElement = document.createElement('li')
-        let newContent = document.createTextNode(element)
-        newElement.appendChild(newContent)
-        currentCardBeats.appendChild(newElement)
-    })
-    
-    
-
-
 
 const cardList = [
     {
@@ -144,9 +140,20 @@ const cardList = [
  */
 /*TO DO 
 1) Wymyśleć, co zrobić, by podświetlała się ikona, na którą najeżdżam myszką
+    <będzie to wszystko ogarnięte przez js
+        > robimy 3 zaminne typu array
+        > 1 przetrzymuje kartę, którą wybraliśmy
+        > 2 przetrzymuje karty które nasza karta bije
+        > 3 przetrzymuje karty, które biją naszą kartę
+    
+    Następnie stworzę funkcję która bierze dwa argumenty (zajebiście ambitnie)
+        > 1 argument to array
+        > 2 to kolor (możemy go przetrzymywać globalnie)
+
+        Funkcja przechodzi przez cardList i 
+    
+
 3) W idealnym przypadku, wszystko powinno się odwoływać do jedego tylko objectu 'cardList'
-4) Pokombinować z CSS, żeby elementy umieścić centralnie w kółku, i w zależności od rozdzielczości ekranu,
- przybliżały się do centrum, lub oddalały
 5) Dodać wtedy nazwy kart
 6) Robimy zmienną która zbiera wartości wszystkich kart, z którymi wygrywamy.
 7) Zmienną powyżej ustawiamy jako argument funkcji, która podświetla nam na zielono karty
@@ -155,6 +162,8 @@ const cardList = [
 
 /* Zrobione :D 
 2) Sprawić, by prawidłowo wyświetlała się lista kart, które bijemy, oraz te które biją nas
+4) Pokombinować z CSS, żeby elementy umieścić centralnie w kółku, i w zależności od rozdzielczości ekranu,
+ przybliżały się do centrum, lub oddalały (nie do końca tak działa, jakbym chciał, ale w sumie jest ok)
 
 
 /*Maybe stupid, maybe not

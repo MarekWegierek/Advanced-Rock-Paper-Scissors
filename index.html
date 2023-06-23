@@ -10,30 +10,33 @@
     <header></header>
     <main>
         <div id="circle" class="main-element">
-            <button class="card-button gun-btn" ><img src="images/gun-btn.png" id="gun-btn"></button>
-            <button class="card-button lightning-btn"><img src="images/lightning-btn.png" id="lightning-btn"></button>
-            <button class="card-button devil-btn"><img src="images/devil-btn.png" id="devil-btn"></button>
-            <button class="card-button dragon-btn"><img src="images/dragon-btn.png" id="dragon-btn"></button>
-            <button class="card-button water-btn"><img src="images/water-btn.png" id="water-btn"></button>
-            <button class="card-button air-btn"><img src="images/air-btn.png" id="air-btn"></button>
-            <button class="card-button paper-btn"><img src="images/paper-btn.png" id="paper-btn"></button>
-            <button class="card-button sponge-btn"><img src="images/sponge-btn.png" id="sponge-btn"></button>
-            <button class="card-button wolf-btn"><img src="images/wolf-btn.png" id="wolf-btn"></button>
-            <button class="card-button tree-btn"><img src="images/tree-btn.png" id="tree-btn"></button>
-            <button class="card-button human-btn"><img src="images/human-btn.png" id="human-btn"></button>
-            <button class="card-button snake-btn"><img src="images/snake-btn.png" id="snake-btn"></button>
-            <button class="card-button scissors-btn"><img src="images/scissors-btn.png" id="scissors-btn"></button>
-            <button class="card-button fire-btn"><img src="images/fire-btn.png" id="fire-btn"></button>
-            <button class="card-button rock-btn"><img src="images/rock-btn.png" id="rock-btn"></button>
+            
+            <ul class="circle-card-list">
+                <li><button class="card-button gun-btn"><img src="images/gun-btn.png" id="gun-btn"></button></li>
+                <li><button class="card-button lightning-btn"><img src="images/lightning-btn.png" id="lightning-btn"></button></li>
+                <li><button class="card-button devil-btn"><img src="images/devil-btn.png" id="devil-btn"></button></li>
+                <li><button class="card-button dragon-btn"><img src="images/dragon-btn.png" id="dragon-btn"></button></li>
+                <li><button class="card-button water-btn"><img src="images/water-btn.png" id="water-btn"></button></li>
+                <li><button class="card-button air-btn"><img src="images/air-btn.png" id="air-btn"></button></li>
+                <li><button class="card-button paper-btn"><img src="images/paper-btn.png" id="paper-btn"></button></li>
+                <li><button class="card-button sponge-btn"><img src="images/sponge-btn.png" id="sponge-btn"></button></li>
+                <li><button class="card-button wolf-btn"><img src="images/wolf-btn.png" id="wolf-btn"></button></li>
+                <li><button class="card-button tree-btn"><img src="images/tree-btn.png" id="tree-btn"></button></li>
+                <li><button class="card-button human-btn"><img src="images/human-btn.png" id="human-btn"></button></li>
+                <li><button class="card-button snake-btn"><img src="images/snake-btn.png" id="snake-btn"></button></li>
+                <li><button class="card-button scissors-btn"><img src="images/scissors-btn.png" id="scissors-btn"></button></li>
+                <li><button class="card-button fire-btn"><img src="images/fire-btn.png" id="fire-btn"></button></li>
+                <li><button class="card-button rock-btn"><img src="images/rock-btn.png" id="rock-btn"></button></li>
+            </ul>
         </div>
         <div id="aside-column" class="main-element">
-            <div>Figure: <span id="current-card"></span></div>
+            <div>Figure: <p id="current-card"></p></div>
             <div>Beats: <ul id="current-card-beats"></ul></div>
             <div>Beaten by: <span id="current-card-beaten-by"></span></div>
             
         </div>
-        <div id="choices-option" class="main-element" ></div>
-        <div id="score-board" class="main-element"></div>
+        <div id="choices-option" class="main-element"> Here we will have options to choose from, cards (in version above 1.0) and giant button to start a match</div>
+        <div id="score-board" class="main-element"> Here you will have score of the current match </div>
     </main>
     <script src="script.js" charset="utf-8"></script>
 </body>

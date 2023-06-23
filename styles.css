@@ -20,34 +20,31 @@ body {
 main {
     margin: 20px auto;
     width: 70vw;
+    max-width: 1000px;
     height: 95vh;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr ;
+    grid-template-columns: 3fr 1fr ;
     grid-template-rows: 3fr 3fr 2fr 1fr;
     grid-template-areas: 
         'circle circle aside'
         'circle circle aside'
         'choices-option choices-option choices-option'
         'score-board score-board score-board';
-    grid-gap: 10px;
+    grid-gap: 15px;
 
 }
 
 .main-element {
     border: 5px solid black;
     background-color: antiquewhite;
-}
-
-#circle {
-    grid-area: circle;
-    
-
+    border-radius: 10px;
 }
 
 #aside-column {
     grid-area: aside;
     text-align: center;
     font-size: 1.4rem;
+    padding: 0 1rem;
 }
 
 #choices-option {
@@ -56,6 +53,26 @@ main {
 
 #score-board {
     grid-area: score-board;
+}
+
+#circle {
+    grid-area: circle;
+    height: 550px;
+    width: 550px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+/* Options on a circle */
+
+.central-circle {
+    height: 80%;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 5% auto;
 }
 
 .card-button, .card-button img {
@@ -71,15 +88,95 @@ main {
     transform: translateY(-4%) translateX(-4%);
 }
 
-.card-button:hover {
-    scale: 1.2;
+
+
+/* Cards*/
+
+.circle-card-list {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    transform: translateX(-25px) translateY(-27px);
 }
 
-@media only screen and (max-width:1280px) {
-    main {
-        width: 90vw;
-    }
-    #aside-column {
-        font-size: 1.1rem;
-    }
+.circle-card-list li button {
+    position: absolute;
+    transform-origin: center;
+}
+
+.gun-btn {
+    transform:rotate(-69deg) translate(230px) rotate(70deg)
+    
+}
+
+.lightning-btn {
+    transform:rotate(-45deg) translate(230px) rotate(60deg)
+}
+
+.devil-btn {
+    transform:rotate(-21deg) translate(230px) rotate(20deg)
+}
+
+.dragon-btn {
+    transform:rotate(3deg) translate(230px) rotate(11deg)
+}
+
+.water-btn {
+    transform:rotate(27deg) translate(230px) rotate(-30deg)
+}
+
+.air-btn {
+    transform:rotate(51deg) translate(230px) rotate(-50deg)
+}
+
+.paper-btn {
+    transform:rotate(75deg) translate(230px) rotate(-60deg)
+}
+
+.sponge-btn {
+    transform:rotate(99deg) translate(230px) rotate(-110deg)
+}
+
+.wolf-btn {
+    transform:rotate(123deg) translate(230px) rotate(-120deg)
+}
+
+.tree-btn {
+    transform:rotate(147deg) translate(230px) rotate(-145deg)
+}
+
+.human-btn {
+    transform:rotate(171deg) translate(230px) rotate(-180deg)    
+}
+
+.snake-btn {
+    transform:rotate(195deg) translate(230px) rotate(-180deg)
+}
+.scissors-btn {
+    transform:rotate(219deg) translate(230px) rotate(150deg)
+}
+
+.fire-btn {
+    transform:rotate(243deg) translate(230px) rotate(120deg)
+}
+
+.rock-btn {
+    transform:rotate(267deg) translate(230px) rotate(120deg)
+}
+
+.card-button:hover, .card-button:active {
+    box-shadow: 0px 0px 40px 5px rgba(75, 92, 240, 1);
+}
+
+#aside-column div {
+    margin-top: 1rem;
+    background-color: aliceblue;
+    opacity: 0.9;
+    border-radius: 10%;
+}
+
+#current-card {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 5px;
 }
