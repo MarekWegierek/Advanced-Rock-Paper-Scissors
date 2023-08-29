@@ -13,11 +13,11 @@ possibleChoices.forEach((possibleChoice) =>
     let beatsArrayBtnName = [];
     let beatenByArrayBtnName = [];
 
-    /*Zerujemy zawartość list w html przy każdym clicku */
+    /* Clean html list on every click */
     currentCardBeats.replaceChildren();
     currentCardBeatenBy.replaceChildren();
 
-    /* Przypisuje zawartość z cards do zmiennych powyżej */
+    /* Assign values to varaibles above  */
     cardList.forEach((card) => {
       if (card.btnName == currTargetClassList[1]) {
         let { name, beats, beatenBy } = card;
@@ -27,7 +27,7 @@ possibleChoices.forEach((possibleChoice) =>
       }
     });
 
-    /*Funkcja, która przerabia elementy z cards na li */
+    /*Turning variables into html elements */
 
     function makeList(array, htmlElement) {
       array.forEach((element) => {
@@ -38,13 +38,13 @@ possibleChoices.forEach((possibleChoice) =>
       });
     }
 
-    /* Pakujemy zmienne do html */
+    /* Pushing made above elements into html */
     userChoiceDisplay.innerHTML = figure;
     makeList(beatsArray, currentCardBeats);
     makeList(beatenByArray, currentCardBeatenBy);
 
-    /*Tworzymy listę zawierającą wszystkie nazwy btn dla beatsArray i beatenByArray */
-
+    /*Create array for all names of the buttons from beatsArray i beatenByArray*/
+    /* SHOULD BE SHORTEN UP */
     beatsArray.forEach((cardName) => {
       cardList.forEach((card) => {
         if (cardName == card.name) {
@@ -60,8 +60,8 @@ possibleChoices.forEach((possibleChoice) =>
         }
       });
     });
-
-    /* Zaznaczamy w html które karty biją (zielona obwódka)*/
+    /* SHOULD BE SHORTEN UP */
+    /* Check all cards that beats (green rim) */
 
     possibleChoices.forEach((icon) => {
       if (Array.from(icon.classList).includes('beats')) {
@@ -73,8 +73,7 @@ possibleChoices.forEach((possibleChoice) =>
         icon.classList.add('beats');
       }
     });
-
-    /* Zaznaczamy w html które karty są bite (czerwona obwódka) */
+    /* Check all cards that are beaten up (red rim) */
 
     possibleChoices.forEach((icon) => {
       if (Array.from(icon.classList).includes('beaten-by')) {
