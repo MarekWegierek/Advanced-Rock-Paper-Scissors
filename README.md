@@ -2,11 +2,16 @@
 
 ## This is a base model project, created with intention to translate it in the future to React and React Native to mobile app
 
-This is my first semi-serious project, where I didn't follow any tutorials from YT and just try to make it as best I'can do at this moment in my life.
+This is my first semi-serious project, where I didn't follow any tutorials from YT and just try to make it as best I can do at the moment.
 
 ## What this app will do?
 
-It is a advanced version of Paper Rock Scissor Game, where to standard three option, I've added 12 new option to chose from during game. It might be played as standard game (against computer oponent) but I will mainly focus on making it as a functional guide to solve nerd conflicts on parties with no bitches. My roadmap to this project looks like that:
+It is a advanced version of Paper Rock Scissor Game, where to standard three option, I've added 12 new option to chose from during game. It might be played as standard game (against computer oponent) or simply just as a guide if you want to play that game in real life.
+I've based my idea and take icons from this image I've found on the internet:
+<img src='images/8496.jpg' height='500px' width='500px'>
+made by <a href='https://twitter.com/hamsterdunce' target='_blank'>David C. Lovelace</a>
+
+ My roadmap to this project looks like that:
 
 * v0.1 functional desktop version of app (we are here)
 * v0.2 mobile browser version 
@@ -26,13 +31,14 @@ It is a advanced version of Paper Rock Scissor Game, where to standard three opt
 3. Click on the icon/card of your chosing. It will show up what option you beat with your icon (green) and which one will beat you (red). 
 4. Context menu on the right will help you if you are confused by UI or are colorblind
 
-## How to tweak project for your own uses?
+## How to actually play that game?
 
-# Adding new card/option
-
-I will make cards as objects, and it will looks like this
-    const card = {
-        name: 'card_name',
-        beating: ['card_name_1', 'card_name_2'],
-        beaten_by: ['card_name_3', card_name_4']  
-    }
+1. Click the card on the wheel
+2. In the window below you should see the icon of your choosing
+3. Confirm your choice by cliking 'Done'
+4. 1 If you playing against computer, the computer will make a turn
+4. 2 If you playing against player, your conformed option should hide. Now it's time for the other player to make a turn
+5. Whatever you play against computer, or another player, after both choices are made, the match has begun. 
+6. <b>For each win player get 1 points, and for each lost match, you lose 1</b>
+7. Both of players starts with 0 points. Player who get 3 points first will win.
+8. None of players can have less than 0 points.

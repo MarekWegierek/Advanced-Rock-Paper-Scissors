@@ -15,14 +15,17 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
+    position: relative;
+
 }
 
 main {
-    margin: 20px auto;
+    margin: 40px auto;
     width: 70vw;
-    max-width: 1000px;
-    height: 95vh;
+    max-width: 870px;
+    max-height: 850px;
     display: grid;
+    place-content: center;
     grid-template-columns: 3fr 1fr ;
     grid-template-rows: 3fr 3fr 2fr 1fr;
     grid-template-areas: 
@@ -43,8 +46,10 @@ main {
 #aside-column {
     grid-area: aside;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: 0 1rem;
+    width: 300px;
+    height: 560px;
 }
 
 #choices-option {
@@ -164,15 +169,25 @@ main {
     transform:rotate(267deg) translate(230px) rotate(120deg)
 }
 
-.card-button:hover, .card-button:active {
-    box-shadow: 0px 0px 40px 5px rgba(75, 92, 240, 1);
+.card-button:hover {
+    box-shadow: 0px 0px 10px 5px rgb(44, 50, 100);
+    transition: 100ms;
 }
 
 #aside-column div {
-    margin-top: 1rem;
-    background-color: aliceblue;
+    margin: 0.7rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.7rem 0;
     opacity: 0.9;
     border-radius: 10%;
+    padding: 5px;
+}
+
+#aside-column div b {
+    font-size: larger;
+    margin: 2px;
 }
 
 #current-card {
@@ -180,3 +195,56 @@ main {
     font-weight: 600;
     margin-top: 5px;
 }
+
+#figure {
+    background-color: lightslategray;
+}
+
+#beats-div {
+    background-color: rgb(0, 243, 41);
+}
+
+#beatenBy-div {
+    background-color: rgb(243, 0, 0)
+}
+
+.ass {
+    box-shadow: 0px 0px 0px 5px rgba(66, 68, 90, 1);
+}
+.beats {
+    box-shadow: 0px 0px 0px 5px rgb(0, 243, 41);
+}
+.beaten-by {
+    box-shadow: 0px 0px 0px 5px rgb(243, 0, 0);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    margin-left: -30px;
+    z-index: -10000;
+  }
+
+  .a { 
+    top: 120%;
+    left: 50%;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

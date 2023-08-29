@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adv Paper Rock Scissors</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" type="module" defer></script>
+    
 </head>
 <body>
     <header></header>
     <main>
         <div id="circle" class="main-element">
-            
             <ul class="circle-card-list">
-                <li><button class="card-button gun-btn"><img src="images/gun-btn.png" id="gun-btn"></button></li>
+                <li><button class="card-button gun-btn tooltip a"><img src="images/gun-btn.png" id="gun-btn">
+                        <span class="tooltiptext">
+                            Gun
+                        </span>
+                    </img></button></li>
                 <li><button class="card-button lightning-btn"><img src="images/lightning-btn.png" id="lightning-btn"></button></li>
                 <li><button class="card-button devil-btn"><img src="images/devil-btn.png" id="devil-btn"></button></li>
                 <li><button class="card-button dragon-btn"><img src="images/dragon-btn.png" id="dragon-btn"></button></li>
@@ -30,14 +35,18 @@
             </ul>
         </div>
         <div id="aside-column" class="main-element">
-            <div>Figure: <p id="current-card"></p></div>
-            <div>Beats: <ul id="current-card-beats"></ul></div>
-            <div>Beaten by: <span id="current-card-beaten-by"></span></div>
-            
+                <div id="figure"><b>Figure: </b><p id="current-card"></p></div>
+                <div id="beats-div"><b>Beats: </b><ul id="current-card-beats"></ul></div>
+                <div id="beatenBy-div"><b>Beaten by: </b><span id="current-card-beaten-by"></span></div>
         </div>
-        <div id="choices-option" class="main-element"> Here we will have options to choose from, cards (in version above 1.0) and giant button to start a match</div>
-        <div id="score-board" class="main-element"> Here you will have score of the current match </div>
+        <div id="choices-option" class="main-element"> Here we will have options to choose from, cards (in version above 1.0) and giant button to start a match
+        </div>
+        <div id="score-board" class="main-element"><div class="tooltip">Ass
+            <span class="tooltiptext">
+                Gun
+            </span>
+        </div></button></li> Here you will have score of the current match 
+        </div>
     </main>
-    <script src="script.js" charset="utf-8"></script>
 </body>
 </html>
