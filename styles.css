@@ -1,250 +1,263 @@
 *,
 *::after,
 *::before {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   scroll-behavior: smooth;
   text-decoration: none;
   list-style: none;
 }
 
-body {
-    overflow: hidden;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(19,161,181,1) 39%, rgba(255,255,255,1) 100%);
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+:root {
+  --background-gradient-color-1: rgba(2, 0, 36, 1);
+  --background-gradient-color-2: rgba(19, 161, 181, 1);
+  --background-gradient-color-3: rgba(255, 255, 255, 1);
+  --border-color: black;
+  --main-background-color: antiquewhite;
+  --current-figure: rgb(44, 50, 100);
+  --beats-background: rgb(0, 243, 41);
+  --beaten-by-background: rgb(243, 0, 0);
+}
 
+body {
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    var(--background-gradient-color-1) 0%,
+    var(--background-gradient-color-2) 39%,
+    var(--background-gradient-color-3) 100%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
 
 main {
-    margin: 40px auto;
-    width: 70vw;
-    max-width: 870px;
-    max-height: 850px;
-    display: grid;
-    place-content: center;
-    grid-template-columns: 3fr 1fr ;
-    grid-template-rows: 3fr 3fr 2fr 1fr;
-    grid-template-areas: 
-        'circle circle aside'
-        'circle circle aside'
-        'choices-option choices-option choices-option'
-        'score-board score-board score-board';
-    grid-gap: 15px;
-
+  margin: 40px auto;
+  width: 70vw;
+  max-width: 870px;
+  max-height: 850px;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 3fr 3fr 2fr 1fr;
+  grid-template-areas:
+    'circle circle aside'
+    'circle circle aside'
+    'choices-option choices-option choices-option'
+    'score-board score-board score-board';
+  grid-gap: 15px;
 }
 
 .main-element {
-    border: 5px solid black;
-    background-color: antiquewhite;
-    border-radius: 10px;
+  border: 5px solid var(--border-color);
+  background-color: var(--main-background-color);
+  border-radius: 10px;
 }
 
 #aside-column {
-    grid-area: aside;
-    text-align: center;
-    font-size: 1.3rem;
-    padding: 0 1rem;
-    width: 300px;
-    height: 560px;
+  grid-area: aside;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0 1rem;
+  width: 300px;
+  height: 560px;
 }
 
 #choices-option {
-    grid-area: choices-option;
+  grid-area: choices-option;
 }
 
 #score-board {
-    grid-area: score-board;
+  grid-area: score-board;
 }
 
 #circle {
-    grid-area: circle;
-    height: 550px;
-    width: 550px;
-    position: relative;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
+  grid-area: circle;
+  height: 550px;
+  width: 550px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
 }
 
 /* Options on a circle */
 
 .central-circle {
-    height: 80%;
-    width: 80%;
-    border: 1px solid black;
-    border-radius: 50%;
-    margin: 5% auto;
+  height: 80%;
+  width: 80%;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  margin: 5% auto;
 }
 
-.card-button, .card-button img {
-    width: 50px;
-    height: 50px;
+.card-button,
+.card-button img {
+  width: 50px;
+  height: 50px;
 }
 
 .card-button {
-    border: 2px solid black;
-    border-radius: 50%;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
 }
 .card-button img {
-    transform: translateY(-4%) translateX(-4%);
+  transform: translateY(-4%) translateX(-4%);
 }
-
-
 
 /* Cards*/
 
 .circle-card-list {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    transform: translateX(-25px) translateY(-27px);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  transform: translateX(-25px) translateY(-27px);
 }
 
 .circle-card-list li button {
-    position: absolute;
-    transform-origin: center;
+  position: absolute;
+  transform-origin: center;
 }
 
 .gun-btn {
-    transform:rotate(-69deg) translate(230px) rotate(70deg)
-    
+  transform: rotate(-69deg) translate(230px) rotate(70deg);
 }
 
 .lightning-btn {
-    transform:rotate(-45deg) translate(230px) rotate(60deg)
+  transform: rotate(-45deg) translate(230px) rotate(60deg);
 }
 
 .devil-btn {
-    transform:rotate(-21deg) translate(230px) rotate(20deg)
+  transform: rotate(-21deg) translate(230px) rotate(20deg);
 }
 
 .dragon-btn {
-    transform:rotate(3deg) translate(230px) rotate(11deg)
+  transform: rotate(3deg) translate(230px) rotate(11deg);
 }
 
 .water-btn {
-    transform:rotate(27deg) translate(230px) rotate(-30deg)
+  transform: rotate(27deg) translate(230px) rotate(-30deg);
 }
 
 .air-btn {
-    transform:rotate(51deg) translate(230px) rotate(-50deg)
+  transform: rotate(51deg) translate(230px) rotate(-50deg);
 }
 
 .paper-btn {
-    transform:rotate(75deg) translate(230px) rotate(-60deg)
+  transform: rotate(75deg) translate(230px) rotate(-60deg);
 }
 
 .sponge-btn {
-    transform:rotate(99deg) translate(230px) rotate(-110deg)
+  transform: rotate(99deg) translate(230px) rotate(-110deg);
 }
 
 .wolf-btn {
-    transform:rotate(123deg) translate(230px) rotate(-120deg)
+  transform: rotate(123deg) translate(230px) rotate(-120deg);
 }
 
 .tree-btn {
-    transform:rotate(147deg) translate(230px) rotate(-145deg)
+  transform: rotate(147deg) translate(230px) rotate(-145deg);
 }
 
 .human-btn {
-    transform:rotate(171deg) translate(230px) rotate(-180deg)    
+  transform: rotate(171deg) translate(230px) rotate(-180deg);
 }
 
 .snake-btn {
-    transform:rotate(195deg) translate(230px) rotate(-180deg)
+  transform: rotate(195deg) translate(230px) rotate(-180deg);
 }
 .scissors-btn {
-    transform:rotate(219deg) translate(230px) rotate(150deg)
+  transform: rotate(219deg) translate(230px) rotate(150deg);
 }
 
 .fire-btn {
-    transform:rotate(243deg) translate(230px) rotate(120deg)
+  transform: rotate(243deg) translate(230px) rotate(120deg);
 }
 
 .rock-btn {
-    transform:rotate(267deg) translate(230px) rotate(120deg)
+  transform: rotate(267deg) translate(230px) rotate(120deg);
 }
 
 .card-button:hover {
-    box-shadow: 0px 0px 10px 5px rgb(44, 50, 100);
-    transition: 100ms;
+  box-shadow: 0px 0px 10px 5px var(--current-figure);
+  transition: 250ms;
 }
 
 #aside-column div {
-    margin: 0.7rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0.7rem 0;
-    opacity: 0.9;
-    border-radius: 10%;
-    padding: 5px;
+  margin: 0.7rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.7rem 0;
+  opacity: 0.9;
+  border-radius: 10%;
+  padding: 5px;
 }
 
 #aside-column div b {
-    font-size: larger;
-    margin: 2px;
+  font-size: larger;
+  margin: 2px;
 }
 
 #current-card {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-top: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 5px;
 }
 
 #figure {
-    background-color: lightslategray;
+  background-color: lightslategray;
 }
 
 #beats-div {
-    background-color: rgb(0, 243, 41);
+  background-color: var(--beats-background);
 }
 
 #beatenBy-div {
-    background-color: rgb(243, 0, 0)
+  background-color: var(--beaten-by-background);
 }
 
-.ass {
-    box-shadow: 0px 0px 0px 5px rgba(66, 68, 90, 1);
+.figure {
+  box-shadow: -00px 0px 0px 10px lightslategray;
 }
+
 .beats {
-    box-shadow: 0px 0px 0px 5px rgb(0, 243, 41);
+  box-shadow: 0px 0px 0px 5px var(--beats-background);
 }
 .beaten-by {
-    box-shadow: 0px 0px 0px 5px rgb(243, 0, 0);
+  box-shadow: 0px 0px 0px 5px var(--beaten-by-background);
 }
 
 .tooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Tooltip text */
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 60px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    margin-left: -30px;
-    z-index: -10000;
-  }
+  position: relative;
+  display: inline-block;
+}
 
-  .a { 
-    top: 120%;
-    left: 50%;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 60px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  margin-left: -30px;
+  z-index: -10000;
+}
+
+.a {
+  top: 120%;
+  left: 50%;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
