@@ -3,6 +3,7 @@
 ## This is a base model project, created with intention to translate it in the future to React and React Native to mobile app
 
 This is my first semi-serious project, where I didn't follow any tutorials from YT and just try to make it as best I can do at the moment.
+Also to practice git, writing documentation, and as concise code, as my simple-minded coomer brain can produce.
 
 ## What this app will do?
 
